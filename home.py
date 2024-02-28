@@ -5,9 +5,18 @@ import pydeck as pdk
 import os
 import pathlib
 
-#chart_data = pd.DataFrame(
- #  np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
-  # columns=['lat', 'lon'])
+st.set_page_config(
+    page_title="One Knoxville Collective App",
+    #page_icon="./OneKnoxCrest.png",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'mailto:gus@oneknoxsc.com',
+        'Report a bug': "mailto:gus@oneknoxsc.com",
+        'About': "# Built for One Knox Collective staff by Gus Alvarez. Please send your feedback frequently so that this app may serve you best."
+    }
+)
+
 
 path = os.path.join(str(pathlib.Path().resolve()), './okycgeoGM_color.csv')
 with open(path) as f:
